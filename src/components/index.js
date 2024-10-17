@@ -9,7 +9,10 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import Models  from './Models';
-
+import ProjectDetails from './ProjectDetails';
+import Footer from './Footer';
+import Allworks from './Allworks';
+import Allmodels from './Allmodels';
 
 export {
   Hero,
@@ -21,6 +24,10 @@ export {
   Feedbacks,
   Contact,
   Models,
+  Allworks,
+  Allmodels,
+  Footer,
+  ProjectDetails,
   CanvasLoader,
   EarthCanvas, 
   BallCanvas, 

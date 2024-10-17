@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
@@ -9,15 +9,12 @@ const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(scrollTop > 100);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -25,11 +22,27 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (navId, navTitle) => {
+    setActive(navId);
+    setToggle(false); // Close the mobile menu if open
+
+    // Navigate to specific routes for "Work" and "Models"
+    if (navTitle === "Work") {
+      navigate("/allworks"); // Navigate to the Work page
+    } else if (navTitle === "Models") {
+      navigate("/allmodels"); // Navigate to the Models page
+    } else {
+      // For other links, keep the scrolling behavior
+      navigate("/"); // Navigate to homepage
+      setTimeout(() => {
+        document.getElementById(navId)?.scrollIntoView({ behavior: "smooth" }); // Scroll to the section
+      }, 0);
+    }
+  };
+
   return (
     <nav
-      className={`${
-        styles.paddingX
-      } w-full flex items-center py-5 fixed top-0 z-20 ${
+      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 ${
         scrolled ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -44,8 +57,8 @@ const Navbar = () => {
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
           <p className='text-white text-[18px] font-bold cursor-pointer flex '>
-            Ozmo &nbsp;
-            <span className='sm:block hidden'> | 3D Figs</span>
+            OZMO &nbsp;
+            <span className='text-yellow-500 sm:block hidden'> Studio</span>
           </p>
         </Link>
 
@@ -56,9 +69,9 @@ const Navbar = () => {
               className={`${
                 active === nav.title ? "text-white" : "text-secondary"
               } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(nav.title)}
+              onClick={() => handleNavClick(nav.id, nav.title)} // Pass both nav.id and nav.title
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <span>{nav.title}</span>
             </li>
           ))}
         </ul>
@@ -83,12 +96,9 @@ const Navbar = () => {
                   className={`font-poppins font-medium cursor-pointer text-[16px] ${
                     active === nav.title ? "text-white" : "text-secondary"
                   }`}
-                  onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
-                  }}
+                  onClick={() => handleNavClick(nav.id, nav.title)} // Pass both nav.id and nav.title
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <span>{nav.title}</span>
                 </li>
               ))}
             </ul>

@@ -1,30 +1,32 @@
 import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-
+import {MOUSE}  from "three";
 import CanvasLoader from "../Loader";
 
 const Computers = ({ isMobile }) => {
-  const computer = useGLTF("./desktop_pc/HEAD_2.gltf");
+  const computer = useGLTF("./desktop_pc/scene.gltf");
 
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
-        position={[10, 40, 10]}
-        angle={0}
-        penumbra={1}
-        intensity={1}
+        position={[40,-10,30]}
+        angle={0.7}
+        penumbra={0.8}
+        intensity={1.2}
         castShadow
         shadow-mapSize={1024}
       />
       <pointLight intensity={1} />
+      
       <primitive
         object={computer.scene}
-        scale={isMobile ? 1 : 100}
-        position={isMobile ? [0, -3, -2.2] : [-1.5, -3, -1.5]}
+        scale={isMobile ? 0.7 : 0.75}
+        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
+      
     </mesh>
   );
 };
@@ -48,9 +50,13 @@ const ComputersCanvas = () => {
     mediaQuery.addEventListener("change", handleMediaQueryChange);
 
     // Remove the listener when the component is unmounted
+
+    
     return () => {
       mediaQuery.removeEventListener("change", handleMediaQueryChange);
     };
+
+    
   }, []);
 
   return (
@@ -66,6 +72,10 @@ const ComputersCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          mouseButtons={{
+            LEFT: MOUSE.ROTATE,
+            RIGHT: null,
+          }}
         />
         <Computers isMobile={isMobile} />
       </Suspense>
