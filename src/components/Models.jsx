@@ -10,6 +10,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const ProjectCard = ({
   index,
   name,
+  creator,
   description,
   tags,
   video,
@@ -19,7 +20,7 @@ const ProjectCard = ({
   const videoRef = useRef(null);
 
   const handleClick = () => {
-    navigate('/project-details', { state: { project: { name, description, tags, video } } });
+    navigate('/project-details', { state: { project: { name, creator, description, tags, video } } });
   };
 
   const handleMouseEnter = () => {
@@ -93,11 +94,12 @@ const Models = () => {
 
   const handleViewAll = () => {
     navigate("/allmodels"); // Redirect to AllModels page
+    window.scrollTo(0, 0); // Scroll to top
   };
   return (  
     <>
       <motion.div variants={textVariant()}>
-        <p className={`${styles.sectionSubText} `}>My work</p>
+        <p className={`${styles.sectionSubText} `}>SHOP</p>
         <h2 className={`${styles.sectionHeadText}`}>3D Models.</h2>
       </motion.div>
 
@@ -106,11 +108,12 @@ const Models = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Discover our curated selection of 3D models, available for printing, painting, and customization. 
+          We specialize in bringing them to life through high-quality 3D printing and professional painting services. 
+          Each model in this portfolio can be fully customized to your preferences, including adjustments in size, color schemes, and finishing techniques.
+          Browse through the collection to find a model that inspires you, 
+          and let us handle the rest—from the perfect 3D print to a beautifully finished product, tailored just for you. 
+          Whether you’re looking for a simple print or a fully custom-painted masterpiece, we’re here to help bring these designs to life.
         </motion.p>
       </div>
 

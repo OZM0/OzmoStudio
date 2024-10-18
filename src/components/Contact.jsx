@@ -116,12 +116,13 @@ const Contact = () => {
               onChange={handleChange}
               placeholder='What you want to say?'
               className='bg-black-200 py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
+              style={{resize: 'none'}}
             />
           </label>
 
           <button
             type='submit'
-            className='bg-black-200 py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+            className='bg-black-200 brightness-90 py-3 px-8 rounded-xl outline-none w-32 text-white text-xl font-bold shadow-md shadow-primary hover:brightness-110 hover:w-64 transition-all duration-300'
           >
             {loading ? "Sending..." : "Send"}
           </button>

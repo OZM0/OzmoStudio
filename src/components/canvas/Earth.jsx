@@ -44,6 +44,8 @@ const EarthCanvas = () => {
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          minAzimuthAngle={-Math.PI / 30} // Limit left rotation to -30 degrees
+          maxAzimuthAngle={Math.PI / 1.4}  // Limit right rotation to 30 degrees
           mouseButtons={{
             LEFT: MOUSE.ROTATE,
             RIGHT: null,

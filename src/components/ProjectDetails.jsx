@@ -70,6 +70,7 @@ const ProjectDetails = () => {
           {/* Left section */}
           <div className="left-section w-full md:w-1/2 pr-0 md:pr-5 mb-6 md:mb-0">
             <h1 className="text-3xl md:text-4xl font-bold">{project.name}</h1>
+            <p className="mt-2 text-black-200 text-sm md:text-md" >{project.creator}</p>
             <p className="mt-4 text-md md:text-lg">{project.description}</p>
             <div className="mt-4 flex flex-wrap gap-2">
               {project.tags.map((tag, index) => (
@@ -127,7 +128,7 @@ const ProjectDetails = () => {
                       src={img}
                       alt={`Thumbnail ${index + 1}`}
                       onClick={() => handleImageClick(index)}
-                      className={`w-20 h-20 object-cover rounded-lg cursor-pointer ${index === currentImageIndex ? 'border-2 border-blue-500' : ''}`}
+                      className={`w-20 h-20 ml-4 object-cover rounded-lg cursor-pointer ${index === currentImageIndex ? 'border-2 border-blue-500' : ''}`}
                     />
                   ))}
                 </div>

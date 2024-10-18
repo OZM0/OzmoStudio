@@ -47,12 +47,34 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'
       >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
+        Welcome to OZMO Studio, your one-stop destination for all things 
+        3D printing, painting, and custom model design! 
+        Whether you're a hobbyist, an artist, or someone with a unique project in mind, 
+        we specialize in bringing your ideas to life through 
+        high-quality 3D printing and expert painting services.
+        
       </motion.p>
+      <br />
+
+      <div className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
+        <h2 className='mb-4'>At our studio, we offer a range of services:</h2>
+        
+        <ul>
+          <li className="mb-4">
+            <strong className='text-black-200 text-[19px]'>3D Printing &nbsp;:</strong> &nbsp; From intricate figurines to large-scale models, we use cutting-edge technology to create highly detailed prints that match your vision.
+          </li>
+          <li className="mb-4">
+            <strong className='text-black-200 text-[19px]'>Custom Projects &nbsp;:</strong> &nbsp; Whether it’s a special commission or a personal project, we collaborate with you to craft bespoke models tailored to your needs.
+          </li>
+          <li className="mb-4">
+            <strong className='text-black-200 text-[19px]'>Model Painting &nbsp;:</strong> &nbsp; Our skilled artists provide professional painting services, adding depth and personality to your models with precision and creativity.
+          </li>
+          <li className="mb-4">
+            <strong className='text-black-200 text-[19px]'>Workshops & Tutorials &nbsp;:</strong> &nbsp; We also offer hands-on classes and tutorials, guiding you through the process of 3D printing, painting techniques, and more—perfect for beginners and experienced creators alike.
+          </li>
+        </ul>
+      </div>
+      
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service, index) => (

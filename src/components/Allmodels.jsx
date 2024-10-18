@@ -7,12 +7,12 @@ import { SectionWrapper } from "../hoc";
 import { models } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, tags, video }) => {
+const ProjectCard = ({ index, name, creator, description, tags, video }) => {
   const navigate = useNavigate(); 
   const videoRef = useRef(null);
 
   const handleClick = () => {
-    navigate('/project-details', { state: { project: { name, description, tags, video } } });
+    navigate('/project-details', { state: { project: { name, creator, description, tags, video } } });
   };
 
   const handleMouseEnter = () => {
@@ -83,7 +83,7 @@ const ProjectCard = ({ index, name, description, tags, video }) => {
 const Allmodels = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const modelsPerPage = 6;
+  const modelsPerPage = 9;
 
   const filteredProjects = models.filter(project => {
     const projectNameMatch = project.name.toLowerCase().includes(searchTerm.toLowerCase());
@@ -111,7 +111,7 @@ const Allmodels = () => {
   return (
     <div className='relative z-0 bg-primary'>
       <div variants={textVariant()} className="mt-4"> 
-        <p className={`${styles.sectionSubText}`}>Shop</p>
+        <p className={`${styles.sectionSubText}`}></p>
         <h2 className={`${styles.sectionHeadText}`}>Models.</h2>
       </div>
       
