@@ -33,7 +33,7 @@ const Navbar = () => {
       navigate("/allmodels"); // Navigate to the Models page
     } else {
       // For other links, keep the scrolling behavior
-      navigate("/"); // Navigate to homepage
+      navigate("/OzmoStudio"); // Navigate to homepage
       setTimeout(() => {
         document.getElementById(navId)?.scrollIntoView({ behavior: "smooth" }); // Scroll to the section
       }, 0);
@@ -48,7 +48,7 @@ const Navbar = () => {
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
-          to='/'
+          to='/OzmoStudio'
           className='flex items-center gap-2'
           onClick={() => {
             setActive("");

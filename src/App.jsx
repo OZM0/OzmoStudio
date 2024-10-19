@@ -10,7 +10,7 @@ const App = () => {
         <Navbar /> 
         <Routes>
           
-          <Route path="/" element={
+          <Route path="/OzmoStudio" element={
             <>
               <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
                 <Hero />
