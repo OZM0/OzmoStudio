@@ -29,11 +29,11 @@ const Navbar = () => {
     // Navigate to specific routes for "Work" and "Models"
     if (navTitle === "Work") {
       navigate("/allworks"); // Navigate to the Work page
-    } else if (navTitle === "Models") {
+    } else if (navTitle === "Sculptures") {
       navigate("/allmodels"); // Navigate to the Models page
     } else {
       // For other links, keep the scrolling behavior
-      navigate("/OzmoStudio"); // Navigate to homepage
+      navigate("/"); // Navigate to homepage
       setTimeout(() => {
         document.getElementById(navId)?.scrollIntoView({ behavior: "smooth" }); // Scroll to the section
       }, 0);
@@ -48,7 +48,7 @@ const Navbar = () => {
     >
       <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
         <Link
-          to='/OzmoStudio'
+          to='/'
           className='flex items-center gap-2'
           onClick={() => {
             setActive("");

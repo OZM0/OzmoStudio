@@ -1,16 +1,16 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import { About, Contact, Experience, Feedbacks, Hero, Models, Navbar, Tech, Works, StarsCanvas, Footer, Allworks, Allmodels } from "./components";
 import ProjectDetails from "./components/ProjectDetails";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className='relative z-0 bg-primary'>
         <Navbar /> 
         <Routes>
           
-          <Route path="/OzmoStudio" element={
+          <Route path="/" element={
             <>
               <div className='bg-hero-pattern bg-cover bg-no-repeat bg-center'>
                 <Hero />
@@ -35,7 +35,7 @@ const App = () => {
         </Routes>
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

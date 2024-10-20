@@ -12,6 +12,7 @@ import Footer from './Footer';
 const ProjectCard = ({
   index,
   name,
+  creator,
   description,
   tags,
   image,
@@ -20,7 +21,7 @@ const ProjectCard = ({
 
   const handleClick = () => {
     // Navigate to the details page with project data
-    navigate('/project-details', { state: { project: { name, description, tags, image } } });
+    navigate('/project-details', { state: { project: { name, creator, description, tags, image } } });
   };
 
   return (

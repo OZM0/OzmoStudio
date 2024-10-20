@@ -7,7 +7,14 @@ import { SectionWrapper } from "../hoc";
 import { models } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, creator, description, tags, video }) => {
+const ProjectCard = ({ 
+  index, 
+  name, 
+  creator, 
+  description, 
+  tags, 
+  video 
+}) => {
   const navigate = useNavigate(); 
   const videoRef = useRef(null);
 
@@ -112,7 +119,7 @@ const Allmodels = () => {
     <div className='relative z-0 bg-primary'>
       <div variants={textVariant()} className="mt-4"> 
         <p className={`${styles.sectionSubText}`}></p>
-        <h2 className={`${styles.sectionHeadText}`}>Models.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Sculptures.</h2>
       </div>
       
       <input 

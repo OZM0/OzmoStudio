@@ -100,7 +100,7 @@ const Models = () => {
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} `}>SHOP</p>
-        <h2 className={`${styles.sectionHeadText}`}>3D Models.</h2>
+        <h2 className={`${styles.sectionHeadText}`}>Sculptures.</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -108,7 +108,7 @@ const Models = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]'
         >
-          Discover our curated selection of 3D models, available for printing, painting, and customization. 
+          Discover our curated selection of Sculptures from talented studios and artists, available for printing, painting, and customization. 
           We specialize in bringing them to life through high-quality 3D printing and professional painting services. 
           Each model in this portfolio can be fully customized to your preferences, including adjustments in size, color schemes, and finishing techniques.
           Browse through the collection to find a model that inspires you, 
@@ -127,7 +127,7 @@ const Models = () => {
           onClick={handleViewAll}
           className="bg-black-100 text-white px-6 py-3 rounded-lg hover:bg-black-200 transition duration-300"
         >
-          View All Models
+          View All Sculptures
         </button>
       </div>
     </>
