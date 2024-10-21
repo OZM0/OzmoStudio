@@ -21,9 +21,9 @@ const Earth = () => {
     <pointLight intensity={1} />
     <primitive
       object={earth.scene}
-      scale={0.4}
-      position={[-1.5, -3.25, -0.5]}
-      rotation={[-0.02, -5.2, -0.01]}
+      scale={0.27}
+      position={[0, 0, 0]}
+      rotation={[0, -5.2, -0.01]}
     />
   </mesh>
   );
