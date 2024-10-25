@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
-        className={`absolute inset-0 top-[80px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
+        className={`absolute inset-0 top-[64px] max-w-7xl mx-auto ${styles.paddingX} flex flex-row items-start gap-5`}
       >
         <div className="flex flex-col justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#F5B301]" />
@@ -63,7 +63,7 @@ const Hero = () => {
       <ComputersCanvas />
 
       {/* Scroll to top button */}
-      <div className="absolute xs:bottom-10 bottom-16 w-full flex justify-center items-center">
+      <div className="absolute xs:bottom-10 bottom-24 w-full flex justify-center items-center">
         {showScrollButton && (
           <a
             onClick={scrollUp}
