@@ -53,8 +53,8 @@ const About = () => {
         we specialize in bringing your ideas to life through 
         high-quality 3D printing and expert painting services.
         
-      </motion.p>
-      <br />
+
+        <br />
 
       <div className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
         <h2 className='mb-4'>At our studio, we offer a range of services:</h2>
@@ -74,6 +74,8 @@ const About = () => {
           </li>
         </ul>
       </div>
+      </motion.p>
+      
       
 
       <div className='mt-20 flex flex-wrap gap-10'>
