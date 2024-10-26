@@ -92,26 +92,26 @@ import kilowog5 from "../assets/ProjectImages/kilowog/7.jpg"
 
 //import model videos 
 
-import spiderman from '../assets/Models/spiderman_360.mkv'
-import wolverine_ww from '../assets/Models/wolverie_ ww_360.mkv'
-import venom from '../assets/Models/venom_360.mkv'
-import kratos_3 from '../assets/Models/kratos_3.mkv'
-import darkside from '../assets/Models/darkside_360.mkv'
-import thanos_comic from '../assets/Models/thanos_comic_360.mkv'
-import omni_man from '../assets/Models/omni_man_360.mkv'
-import invensible from '../assets/Models/invensible_360.mkv'
-import michael_angelo from '../assets/Models/michael_angelo_360.mkv'
-import donatello from '../assets/Models/donatello_360.mkv'
-import raphael from '../assets/Models/raphael_360.mkv'
-import leonardo from '../assets/Models/leonardo_360.mkv'
-import splinter from '../assets/Models/splinter_360.mkv'
-import hulk_avangers from '../assets/Models/hulk_avangers_360.mkv'
-import cyclops from '../assets/Models/cyclops_360.mkv'
-import wolverine_sabretooth from '../assets/Models/wolverine_vs_sabretooth_360.mkv'
-import bane_vs_batman from '../assets/Models/bane_vs_batman_360.mkv'
+import spiderman from '../assets/Models/spiderman_360.mp4'
+import wolverine_ww from '../assets/Models/wolverie_ ww_360.mp4'
+import venom from '../assets/Models/venom_360.mp4'
+import kratos_3 from '../assets/Models/kratos_3.mp4'
+import darkside from '../assets/Models/darkside_360.mp4'
+import thanos_comic from '../assets/Models/thanos_comic_360.mp4'
+import omni_man from '../assets/Models/omni_man_360.mp4'
+import invensible from '../assets/Models/invensible_360.mp4'
+import michael_angelo from '../assets/Models/michael_angelo_360.mp4'
+import donatello from '../assets/Models/donatello_360.mp4'
+import raphael from '../assets/Models/raphael_360.mp4'
+import leonardo from '../assets/Models/leonardo_360.mp4'
+import splinter from '../assets/Models/splinter_360.mp4'
+import hulk_avangers from '../assets/Models/hulk_avangers_360.mp4'
+import cyclops from '../assets/Models/cyclops_360.mp4'
+import wolverine_sabretooth from '../assets/Models/wolverine_vs_sabretooth_360.mp4'
+import bane_vs_batman from '../assets/Models/bane_vs_batman_360.mp4'
 
 
-import coming_soon from '../assets/Models/coming_soon.mkv'
+import coming_soon from '../assets/Models/coming_soon.mp4'
 
 
 //import testimonial images
