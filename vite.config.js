@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/OzmoStudio/',
   plugins: [react()],
-  assetsInclude: ['**/*.mkv'],
+  assetsInclude: ['**/*.mp4'],
 })
